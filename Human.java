@@ -1,6 +1,6 @@
 public class Human {
     private int yearOfBirth;
-    public  String name;
+    public String name;
     private String town;
     public String jobTitle;
 
@@ -27,18 +27,22 @@ public class Human {
     public int getYearOfBirth() {
         return yearOfBirth;
     }
+
     public String getTown() {
         return town;
     }
 
     public void setYearOfBirth(int yearOfBirth) {
-        if(yearOfBirth<=0) {yearOfBirth=0;}
+        if (yearOfBirth <= 0) {
+            yearOfBirth = 0;
+        }
         this.yearOfBirth = yearOfBirth;
     }
 
     public void setTown(String town) {
-        if(town==null || town.isBlank()==true)
-        {town="Информация не указана";}
+        if (town == null || town.isBlank() == true) {
+            town = "Информация не указана";
+        }
         this.town = town;
     }
 }

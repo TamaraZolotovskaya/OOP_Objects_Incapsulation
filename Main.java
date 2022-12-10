@@ -7,10 +7,10 @@ public class Main {
     public static void main(String[] args) {
 
         //class Human
-        Human maxim = new Human(LocalDate.now().getYear()-35, "Максим", "Минск", "бренд-менеджер");
-        Human ann = new Human(LocalDate.now().getYear()-29, "Аня", "Москва", "методист образовательных программ");
-        Human kate = new Human(LocalDate.now().getYear()-28, "Катя", "Калининград", "продакт-менеджер");
-        Human artem = new Human(LocalDate.now().getYear()-27, "Артём", "Москва", "директор по развитию бизнеса");
+        Human maxim = new Human(LocalDate.now().getYear() - 35, "Максим", "Минск", "бренд-менеджер");
+        Human ann = new Human(LocalDate.now().getYear() - 29, "Аня", "Москва", "методист образовательных программ");
+        Human kate = new Human(LocalDate.now().getYear() - 28, "Катя", "Калининград", "продакт-менеджер");
+        Human artem = new Human(LocalDate.now().getYear() - 27, "Артём", "Москва", "директор по развитию бизнеса");
 
         System.out.println(maxim);
         System.out.println(ann);
@@ -21,7 +21,7 @@ public class Main {
         System.out.println(vlad);
 
         //class transport.Car
-        Car.Insurance myInsuranse = new Car.Insurance(LocalDate.of(2022,12,19), 5000, "234567891");
+        Car.Insurance myInsuranse = new Car.Insurance(LocalDate.of(2022, 12, 19), 5000, "234567891");
         Car lada = new Car("Lada",
                 "Granta",
                 1.7,
@@ -97,9 +97,9 @@ public class Main {
                 myInsuranse);
         lada.changeTires(5);
         hyindai.changeTires(12);
-        boolean trueNumber= lada.isCorrectNumber();
-        if (trueNumber==false) {
-            System.out.println(lada.getBrand() + " " + lada.getModel() + " имеет некорректный номер "+lada.getRegistrationNumber());
+        boolean trueNumber = lada.isCorrectNumber();
+        if (trueNumber == false) {
+            System.out.println(lada.getBrand() + " " + lada.getModel() + " имеет некорректный номер " + lada.getRegistrationNumber());
         }
 
         System.out.println(lada);
@@ -110,10 +110,10 @@ public class Main {
         System.out.println(zero);
 
         //class Flower
-        Flower rose = new Flower("Роза обыкновенная","Голландия", 35.59);
-        Flower chrysanthemum = new Flower("Хризантема",null, 15,5);
-        Flower peony = new Flower("Пион","Англия", 69.9,1);
-        Flower gypsophila = new Flower("Гипсофила","Турция", 19.5,10);
+        Flower rose = new Flower("Роза обыкновенная", "Голландия", 35.59);
+        Flower chrysanthemum = new Flower("Хризантема", null, 15, 5);
+        Flower peony = new Flower("Пион", "Англия", 69.9, 1);
+        Flower gypsophila = new Flower("Гипсофила", "Турция", 19.5, 10);
 
         System.out.println(rose);
         System.out.println(chrysanthemum);
@@ -121,8 +121,8 @@ public class Main {
         System.out.println(gypsophila);
 
         //calss Bouqet
-        Flower [] flowers = new Flower[] {rose,rose,rose};
-        Bouquet firstBouquet= new Bouquet(flowers);
+        Flower[] flowers = new Flower[]{rose, rose, rose};
+        Bouquet firstBouquet = new Bouquet(flowers);
         System.out.println(firstBouquet);
 
 

@@ -8,19 +8,21 @@ public class Bouquet {
         this.flowers = flowers;
     }
 
-    private double bouquetSum(){
-        double sum =0;
-        for(int i=0; i<flowers.length; i++){
-            sum=sum+flowers[i].getCost();
+    private double bouquetSum() {
+        double sum = 0;
+        for (int i = 0; i < flowers.length; i++) {
+            sum = sum + flowers[i].getCost();
         }
-        sum=sum*1.1;
+        sum = sum * 1.1;
         return sum;
     }
 
-    private int bouquetLifeSpan(){
-        int min=Integer.MAX_VALUE;
-        for(int i=0; i<flowers.length; i++){
-            if (flowers[i].getLifeSpan()<min){min=flowers[i].getLifeSpan();}
+    private int bouquetLifeSpan() {
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < flowers.length; i++) {
+            if (flowers[i].getLifeSpan() < min) {
+                min = flowers[i].getLifeSpan();
+            }
         }
         return min;
     }
@@ -28,7 +30,7 @@ public class Bouquet {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder("Состав букета:").append("\n");
-        for (int i=0; i<flowers.length; i++){
+        for (int i = 0; i < flowers.length; i++) {
             result.append(flowers[i].getFlowerName()).append("\n");
         }
         result.append("Цена букета: ")

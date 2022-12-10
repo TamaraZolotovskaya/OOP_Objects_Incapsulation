@@ -3,7 +3,7 @@ package transport;
 import java.time.LocalDate;
 
 public class Car {
-    public static class Key{
+    public static class Key {
         private final boolean remoteEngineStart;
         private final boolean keylessAccess;
 
@@ -20,13 +20,16 @@ public class Car {
             return keylessAccess;
         }
     }
+
     public static class Insurance {
         private final LocalDate expireDate;
         private final double price;
-         final String number;
+        final String number;
 
         public Insurance(LocalDate expireDate, double price, String number) {
-            if (expireDate == null){expireDate=LocalDate.now().plusDays(60);}
+            if (expireDate == null) {
+                expireDate = LocalDate.now().plusDays(60);
+            }
             this.expireDate = expireDate;
             if (price <= 0) {
                 price = 1000;
@@ -37,14 +40,15 @@ public class Car {
             }
             this.number = number;
         }
-        public void isCorrectNumber (){
-            if (number.length()!=9){
+
+        public void isCorrectNumber() {
+            if (number.length() != 9) {
                 System.out.println("Номер страховки некорректный!");
             }
         }
 
-        public void isInsuranceExpired (){
-            boolean IsExpared= expireDate.isAfter(LocalDate.now());
+        public void isInsuranceExpired() {
+            boolean IsExpared = expireDate.isAfter(LocalDate.now());
             if (IsExpared) {
                 System.out.println("Страховка просрочена!");
             }
@@ -190,7 +194,7 @@ public class Car {
     }
 
     public void setEngineVolume(double engineVolume) {
-        if (Double.compare(engineVolume, 00) ==0) {
+        if (Double.compare(engineVolume, 00) == 0) {
             engineVolume = 1.5;
         }
         this.engineVolume = engineVolume;
@@ -258,7 +262,7 @@ public class Car {
                 letter == 'С' ||
                 letter == 'Т' ||
                 letter == 'У' ||
-                letter == 'Х' ) {
+                letter == 'Х') {
             return true;
         } else return false;
 
@@ -275,7 +279,7 @@ public class Car {
                 Character.isDigit(number[8]) == false ||
                 isCorrectNumberletter(number[0]) == false ||
                 isCorrectNumberletter(number[4]) == false ||
-                isCorrectNumberletter(number[5]) == false ) {
+                isCorrectNumberletter(number[5]) == false) {
             return false;
         } else return true;
     }
@@ -284,19 +288,20 @@ public class Car {
     @Override
     public String toString() {
         String season = new String();
-        if (winterTires == true){ season="зимняя";}
-        else season="летняя";
+        if (winterTires == true) {
+            season = "зимняя";
+        } else season = "летняя";
         return brand + " " +
-                model + "\n"+
-                "год выпуска " + year +"\n"+
-                "сборка в " + country + "\n"+
-                "объем двигателя " + engineVolume +"\n"+
-                "цвет " + color +"\n"+
-                "коробка передач "+transmission+"\n"+
-                "тип кузова "+bodyType+ "\n"+
-                "регистрационный номер "+registrationNumber+"\n"+
-                "количество мест "+numberOfSeats+ "\n"+
-                "резина "+ season+ "\n"+
-                "страховка: "+ insurance.toString()+ "\n";
+                model + "\n" +
+                "год выпуска " + year + "\n" +
+                "сборка в " + country + "\n" +
+                "объем двигателя " + engineVolume + "\n" +
+                "цвет " + color + "\n" +
+                "коробка передач " + transmission + "\n" +
+                "тип кузова " + bodyType + "\n" +
+                "регистрационный номер " + registrationNumber + "\n" +
+                "количество мест " + numberOfSeats + "\n" +
+                "резина " + season + "\n" +
+                "страховка: " + insurance.toString() + "\n";
     }
 }
